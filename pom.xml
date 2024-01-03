@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.converter</groupId>
-	<artifactId>CurrencyConverter</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>currency-converter</artifactId>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<name>CurrencyConverter</name>
+	<name>currency-converter</name>
 	<description>api to check the value of currencies</description>
 	<properties>
 		<java.version>19</java.version>
