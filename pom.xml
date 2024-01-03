@@ -11,6 +11,7 @@
 	<groupId>com.converter</groupId>
 	<artifactId>CurrencyConverter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>CurrencyConverter</name>
 	<description>api to check the value of currencies</description>
 	<properties>
