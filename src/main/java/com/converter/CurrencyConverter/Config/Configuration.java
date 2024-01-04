@@ -9,8 +9,7 @@ public class Configuration implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/currency/getAll")
-                .allowedOrigins("*")
-                .allowedMethods("*")
-                .allowedHeaders("*");
+                .allowedOrigins("http://200.58.107.39:5173")
+                .allowedMethods("GET");
     }
 }
