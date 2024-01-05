@@ -14,6 +14,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/currency")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://200.58.107.39:5173")
 public class CurrencyController {
 
     private final CurrencyService currencyService;
