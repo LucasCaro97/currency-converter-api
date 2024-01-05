@@ -25,6 +25,7 @@ public class CurrencyController {
             List<Currency> currencies = currencyService.getAll();
             return new ResponseEntity<>(currencies, HttpStatus.OK);
         }catch (Exception e){
+            System.out.println(e);
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
