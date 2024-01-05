@@ -2,6 +2,7 @@ package com.converter.CurrencyConverter.controllers;
 
 import com.converter.CurrencyConverter.models.Currency;
 import com.converter.CurrencyConverter.services.CurrencyService;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,10 +20,10 @@ public class CurrencyController {
     private final CurrencyService currencyService;
 
     @GetMapping("/getAll")
-    public ResponseEntity<List<Currency>> getAll(){
+    public ResponseEntity<List<Currency>> getAll(HttpServletResponse response){
         try{
             List<Currency> currencies = currencyService.getAll();
-            return new ResponseEntity<>(currencies, HttpStatus.OK);
+            return ResponseEntity.ok(currencies);
         }catch (Exception e){
             System.out.println(e);
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
