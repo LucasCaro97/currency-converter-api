@@ -15,6 +15,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/currency")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class CurrencyController {
 
     private final CurrencyService currencyService;
@@ -22,7 +23,9 @@ public class CurrencyController {
     @GetMapping("/getAll")
     public ResponseEntity<List<Currency>> getAll(HttpServletResponse response){
         try{
+            System.out.println("Obteniendo lista de divisas");
             List<Currency> currencies = currencyService.getAll();
+            System.out.println(currencies);
             return ResponseEntity.ok(currencies);
         }catch (Exception e){
             System.out.println(e);
