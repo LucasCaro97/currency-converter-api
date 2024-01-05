@@ -14,12 +14,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/currency")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://200.58.107.39:5173")
 public class CurrencyController {
 
     private final CurrencyService currencyService;
 
     @GetMapping("/getAll")
-    @CrossOrigin(origins = "http://200.58.107.39:5173")
     public ResponseEntity<List<Currency>> getAll(){
         try{
             List<Currency> currencies = currencyService.getAll();
