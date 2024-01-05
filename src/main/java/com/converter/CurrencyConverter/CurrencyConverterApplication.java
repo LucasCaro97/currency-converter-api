@@ -13,17 +13,4 @@ public class CurrencyConverterApplication {
 		SpringApplication.run(CurrencyConverterApplication.class, args);
 	}
 
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				System.out.println("Ejecutando cors");
-				registry.addMapping("/**")
-						.allowedOrigins("http://200.58.107.39:5173")
-						.allowedMethods("GET", "POST", "PUT", "DELETE")
-						.allowedHeaders("*");
-			}
-		};
-	}
 }
